@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podręcznik ezdrp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.nask.pl/dokumenty/zalaczniki/30/30-3224_g.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #000; /* Zmiana koloru tekstu na czarny */
+        }
+        #header {
+			background-color: rgba(255, 255, 255, 0.7); /* Przezroczyste tło */
+			padding: 20px;
+			text-align: center;
+			position: fixed; /* Ustawienie nagłówka na stałej pozycji */
+			width: 100%; /* Szerokość nagłówka na 100% szerokości okna */
+			height: 8vh; /* Zwiększenie wysokości nagłówka na 10% wysokości okna */
+			z-index: 999; /* Ustawienie nagłówka na najwyższym poziomie z-index */
+			top: 0; /* Ustawienie nagłówka na górze strony */
+			margin-top: 0; /* Dla pewności, zerujemy margines górnym */
+			padding-top: 0; /* Dla pewności, zerujemy padding górnym */
+		}
+
+		#content {
+			padding: 20px;
+			box-sizing: border-box;
+			margin-left: 240px; /* szerokość nawigacji (200px) + odstęp (20px) */
+			margin-right: 20px; /* odstęp po prawej stronie */
+			margin-top: calc(10vh + 20px);
+			background-color: rgba(255, 255, 255, 0.7); /* Przezroczyste tło */
+		}
+
+		#navigation {
+			width: 200px;
+			background-color: rgba(0, 0, 0, 0.5); /* Przezroczyste tło */
+			padding: 20px;
+			box-sizing: border-box;
+			position: fixed; /* Ustawienie nawigacji na stałej pozycji */
+			top: 10vh; /* Przyleganie nawigacji do górnej krawędzi okna */
+			left: 0; /* Przyleganie nawigacji do lewej krawędzi okna */
+			bottom: 0; /* Rozciągnięcie nawigacji do dolnej krawędzi okna */
+			overflow-y: auto; /* Dodanie paska przewijania, jeśli zawartość jest za długa */
+			color: #fff;
+		}
+
+        
+        img {
+			width: 80%; /* Zmiana szerokości obrazków na 80% */
+			display: block;
+			margin: 20px auto; /* Wyśrodkowanie obrazków i dodanie odstępu na górze i na dole */
+			opacity: 1; /* Ustawienie przezroczystości na 1, aby obrazki były widoczne */
+		}
+        ul {
+            display: none; /* Domyślnie ukryj listy */
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            color: #fff; /* Zmiana koloru tekstu linków na biały */
+            text-decoration: none; /* Usunięcie podkreślenia z linków */
+        }
+        h2 {
+            cursor: pointer;
+        }
+        .search-input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+		#spacer {
+			height: 1vh; /* Wysokość nagłówka */
+		}
+    </style>
+</head>
+<body>
+
+<div id="spacer"></div> <!-- Pusta sekcja jako odstęp przed treścią -->
+    <div id="header">
+        <h1>Podręcznik ezdrp szpital nr. 4</h1>
+    </div>
+
+<div id="navigation">
+    <input type="text" id="search" class="search-input" placeholder="Szukaj...">
+    <h2 onclick="toggleSection('kancelaria')">Kancelaria</h2>
+    <ul id="kancelaria">
+        <li><a href="rpw.html">RPW</a></li>
+        <li><a href="wysylka.html">Wysyłka</a></li>
+    </ul>
+    
+    <h2 onclick="toggleSection('administracja')">Administracja</h2>
+    <ul id="administracja">
+        <li><a href="#">Personel</a></li>
+        <li><a href="#">Zarządzanie</a></li>
+    </ul>
+</div>
+
+<div id="content">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaZJ4JQ4ZZschai1oCV_xsnUwFv-YPgEOI0-1owsSRw&s" alt="Placeholder zdjęcie 1" data-scroll data-animation="fadeInUp" style="animation-delay: 0.8s;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaZJ4JQ4ZZschai1oCV_xsnUwFv-YPgEOI0-1owsSRw&s" alt="Placeholder zdjęcie 2" data-scroll data-animation="fadeInUp" style="animation-delay: 0.8s;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaZJ4JQ4ZZschai1oCV_xsnUwFv-YPgEOI0-1owsSRw&s" alt="Placeholder zdjęcie 3" data-scroll data-animation="fadeInUp" style="animation-delay: 0.8s;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaZJ4JQ4ZZschai1oCV_xsnUwFv-YPgEOI0-1owsSRw&s" alt="Placeholder zdjęcie 4" data-scroll data-animation="fadeInUp" style="animation-delay: 0.8s;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzaZJ4JQ4ZZschai1oCV_xsnUwFv-YPgEOI0-1owsSRw&s" alt="Placeholder zdjęcie 5" data-scroll data-animation="fadeInUp" style="animation-delay: 0.8s;">
+        <!-- Dodaj kolejne zdjęcia z odpowiednimi wartościami data-animation i animation-delay -->
+    
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    // Inicjalizacja biblioteki ScrollReveal
+    const sr = ScrollReveal({
+        distance: '50px', // Odległość animacji
+        duration: 1000, // Czas trwania animacji (w milisekundach)
+        delay: 200, // Opóźnienie animacji (w milisekundach)
+        reset: true // Animacje zostaną zresetowane przy każdym ponownym wywołaniu funkcji
+    });
+
+    // Konfiguracja animacji dla elementów img
+    sr.reveal('img[data-scroll]', { origin: 'bottom', scale: 0.5 });
+
+    // Funkcja do przewijania sekcji
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Funkcja do filtrowania nawigacji
+    function filterNavigation() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const links = document.querySelectorAll('#navigation a');
+        if (query.length >= 3) {
+            links.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    link.parentElement.style.display = 'list-item';
+                    link.closest('ul').style.display = 'block';
+                } else {
+                    link.parentElement.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('#navigation h2').forEach(h2 => h2.style.display = 'block'); // Pokaż wszystkie sekcje nawigacji
+        } else {
+            links.forEach(link => link.parentElement.style.display = 'list-item'); // Pokaż wszystkie linki
+            document.querySelectorAll('#navigation h2').forEach(h2 => h2.style.display = 'block'); // Pokaż wszystkie sekcje nawigacji
+            document.querySelectorAll('#navigation ul').forEach(ul => ul.style.display = 'none'); // Ukryj wszystkie listy
+        }
+    }
+
+    // Dodanie obsługi zdarzeń dla pola wyszukiwania
+    document.getElementById('search').addEventListener('input', filterNavigation);
+    document.getElementById('search').addEventListener('change', filterNavigation);
+</script>
+
+</body>
+</html>
+

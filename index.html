@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podręcznik ezdrp</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+<div id="spacer"></div> 
+    <div id="header">
+        <h1><a href="index.html">Podręcznik ezdrp szpital nr. 4</a></h1>
+    </div>
+
+<div id="navigation">
+    <input type="text" id="search" class="search-input" placeholder="Szukaj...">
+    <h2 onclick="toggleSection('kancelaria')">Kancelaria</h2>
+    <ul id="kancelaria">
+        <li><a href="podstrony/rpw.wydruk.html">Ustawienie etykiet rpw do wydruku</a></li>
+        <li><a href="podstrony/rpw.html">Rejestracja korespondencji</a></li>
+        
+    </ul>
+    
+    <h2 onclick="toggleSection('administracja')">Administracja</h2>
+    <ul id="administracja">
+        <li><a href="#">Personel</a></li>
+        <li><a href="#">Zarządzanie</a></li>
+    </ul>
+</div>
+
+<script src="js/zdjecia.js"></script>
+<script src="js/szukanie.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+     function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
+
