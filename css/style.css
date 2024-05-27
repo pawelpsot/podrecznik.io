@@ -60,8 +60,13 @@
         }
         a {
             color: #fff; 
-            text-decoration: none; 
+            text-decoration: none;
+	    transition: color 0.3s, background-color 0.3s; 
         }
+	a:hover {
+	    color: #ff0; 
+	    background-color: #333; 
+	}
         h2 {
             cursor: pointer;
         }
