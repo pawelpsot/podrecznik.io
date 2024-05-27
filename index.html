@@ -16,14 +16,14 @@
 
 <div id="navigation">
     <input type="text" id="search" class="search-input" placeholder="Szukaj...">
-    <h2 onclick="toggleSection('kancelaria')">Kancelaria</h2>
+    <h2 data-section="kancelaria">Kancelaria</h2>
     <ul id="kancelaria">
         <li><a href="podstrony/rpw.wydruk.html">Ustawienie etykiet rpw do wydruku</a></li>
         <li><a href="podstrony/rpw.html">Rejestracja korespondencji</a></li>
         
     </ul>
     
-    <h2 onclick="toggleSection('administracja')">Administracja</h2>
+    <h2 data-section="administracja">Administracja</h2>
     <ul id="administracja">
         <li><a href="#">Personel</a></li>
         <li><a href="#">Zarządzanie</a></li>
@@ -31,15 +31,8 @@
 </div>
 
 <script src="js/zdjecia.js"></script>
-<script src="js/szukanie.js"></script>
+<script src="js/nawi.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<script>
-     function toggleSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        section.style.display = section.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
 
 </body>
 </html>
-

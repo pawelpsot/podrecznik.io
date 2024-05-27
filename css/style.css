@@ -32,7 +32,7 @@
 
 		#navigation {
 			width: 15%;
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: rgba(0, 0, 0, 1);
 			padding: 20px;
 			box-sizing: border-box;
 			position: fixed; 
@@ -59,14 +59,28 @@
             margin: 5px 0;
         }
         a {
-            color: #fff; 
-            text-decoration: none;
-	    transition: color 0.3s, background-color 0.3s; 
-        }
-	a:hover {
-	    color: #ff0; 
-	    background-color: #333; 
-	}
+			color: #fff; 
+			text-decoration: none; 
+			transition: color 0.3s, background-color 0.3s; 
+		}
+
+		a:hover {
+			color: #ff0; 
+		}
+
+		a.active {
+			position: relative; 
+			color: #ff0; 
+			font-weight: bold; 
+		}
+
+		a.active::before {
+			content: '➔'; 
+			position: absolute;
+			left: -20px; 
+			color: #ff0; 
+		}
+
         h2 {
             cursor: pointer;
         }
