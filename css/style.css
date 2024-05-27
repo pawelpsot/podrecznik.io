@@ -10,7 +10,7 @@
             color: #000; 
         }
         #header {
-			background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(0, 0, 0, 1);
 			padding: 20px;
 			text-align: center;
 			position: fixed; 
@@ -32,7 +32,7 @@
 
 		#navigation {
 			width: 15%;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.8);
 			padding: 20px;
 			box-sizing: border-box;
 			position: fixed; 
