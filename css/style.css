@@ -10,7 +10,7 @@
             color: #000; 
         }
         #header {
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0);
 			padding: 20px;
 			text-align: center;
 			position: fixed; 
