@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         distance: '50px', // Odległość animacji
         duration: 1000, // Czas trwania animacji (w milisekundach)
         delay: 200, // Opóźnienie animacji (w milisekundach)
-        reset: true 
+        reset: false
     });
 
     // Konfiguracja animacji dla elementów img
