@@ -57,6 +57,7 @@
         }
         li {
             margin: 5px 0;
+			padding: 1px;
         }
         a {
 			color: #fff; 
