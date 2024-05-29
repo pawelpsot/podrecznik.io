@@ -94,3 +94,9 @@
 		#spacer {
 			height: 1vh; 
 		}
+		.caption {
+			text-align: center;
+			font-size: 30px; /* Adjust the size as needed */
+			color: #000000; /* Change the color as needed */
+		}
+	
